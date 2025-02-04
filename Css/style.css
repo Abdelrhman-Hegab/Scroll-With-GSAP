@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    background: #825fd3;
+    height: 100Vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(#997ed8, transparent, transparent);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+}
+
+header nav {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: "Anton", "serif";
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+header nav .nav-links a {
+    color: aliceblue;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+header nav .nav-links a:hover {
+    color: #ffffff9d;
+}
+
+.hero .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#cans {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+#leaf {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 12%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    z-index: 10;
+}
+
+#blackberry1 {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+    width: 13vw;
+}
+
+#blackberry2 {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+}
+
+#blackberry3 {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 6vw;
+}
+
+#coconoutleaf {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 20%;
+}
+
+.hero h1 {
+    font-size: 28vw;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 10px;
+    font-family: "Anton", "serif";
+    text-transform: uppercase;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+.about {
+    padding: 100px 0;
+    height: 100vh;
+}
+
+.about .text {
+    width: 50%;
+}
+
+.about .text h2 {
+    font-size: 3.5vw;
+    color: #0d071c;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 20;
+}
+
+.about .text h2 span {
+    color: #816adb;
+}
+
+
+.about .text .boxs {
+    display: flex;
+    gap: 50%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+
+.about .text .boxs .box img {
+    width: 25%;
+    rotate: 30deg;
+}
+
+.about .text .boxs .box h4 {
+    color: #0d071c;
+    margin: 20px 0 10px;
+    font-size: 1.1vw;
+}
+
+.about .text .boxs .box p {
+    font-size: .9vw;
+    color: #4b4b4b;
+}
+
+.about .text .btn {
+    padding: 15px 45px;
+    font-size: 18px;
+    background-color: #825ddd;
+    border: 1px solid #825ddd;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.about .text .btn:hover {
+    background: transparent;
+    color: #816adb;
+}
+
+.stand {
+    height: 85vh;
+    background: #b19eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.stand .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.stand .container img {
+    width: 55%;
+}
+
+.stand .container h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-family: "Anton", serif;
+    color: #6748af;
+    letter-spacing: 7px;
+}
+
+
+@media (max-width: 992px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container #coconoutleaf {
+        position: absolute;
+        top: 11%
+    }
+
+    .container #cans {
+        width: 40%;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .container #coconoutleaf {
+        top: 13%
+    }
+
+    .container #cans {
+        width: 45%;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+    .container #blackberry1 {
+        width: 15vw;
+        left: 38%;
+    }
+
+    .container #blackberry2 {
+        width: 18vw;
+    }
+
+    .container #blackberry3 {
+        width: 10vw;
+        left: 35%;
+
+    }
+
+    .container #coconoutleaf {
+        top: 18%;
+        width: 30%;
+    }
+
+    .container #cans {
+        width: 65%;
+    }
+
+    .about .text .boxs {
+        gap: 40%
+    }
+
+    .about .container .btn {
+        font-size: 16px;
+        padding: 15px 40px;
+    }
+
+
+
+    .stand .container img {
+        margin-bottom: 50%;
+    }
+}
+
+@media (max-width: 388px) {
+    .about .container .btn {
+        padding: 10px 30px;
+    }
+}
