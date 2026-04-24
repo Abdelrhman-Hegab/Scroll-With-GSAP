@@ -1,5 +1,8 @@
 let mm = gsap.matchMedia();
 
+/* ================================
+   📌 DESKTOP — فوق 1024px
+================================ */
 mm.add("(min-width: 1024px)", () => {
 
     let tl = gsap.timeline({
@@ -49,15 +52,15 @@ mm.add("(min-width: 1024px)", () => {
     let tl2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".three",
-            start: "0% 95%",
+            start: "0% 0%",
             end: "20% 50%",
             scrub: true,
         }
     });
 
     tl2.to("#cans", {
-        top: "237%",
-        left: "50%",
+        top: "235%",
+        left: "52%",
         width: "30%",
         rotate: "0deg",
     }, 'cans')
@@ -65,7 +68,9 @@ mm.add("(min-width: 1024px)", () => {
 });
 
 
-
+/* ================================
+   📌 TABLET — من 768 لحد 1023px
+================================ */
 mm.add("(min-width:768px) and (max-width:1023px)", () => {
 
     let tl = gsap.timeline({
@@ -123,7 +128,7 @@ mm.add("(min-width:768px) and (max-width:1023px)", () => {
     });
 
     tl2.to("#cans", {
-        top: "240%",
+        top: "239.5%",
         left: "50%",
         width: "40%",
         rotate: "0deg",
@@ -133,7 +138,7 @@ mm.add("(min-width:768px) and (max-width:1023px)", () => {
 
 
 
-mm.add("(max-width: 767px)", () => {
+mm.add("(min-width: 550px) and (max-width: 767px)", () => {
 
     let tl = gsap.timeline({
         scrollTrigger: {
@@ -190,8 +195,8 @@ mm.add("(max-width: 767px)", () => {
     });
 
     tl2.to("#cans", {
-        top: "241.5%",
-        left: "50%",
+        top: "239.5%",
+        left: "52%",
         width: "40%",
         rotate: "0deg",
     }, 'cans')
@@ -210,9 +215,9 @@ mm.add("(max-width: 550px)", () => {
     });
 
     tl.to("#cans", {
-        top: "160%",  
-        left: "80%",   
-        width: "45%",  
+        top: "160%",   // slightly less vertical movement
+        left: "80%",   // move a bit more to fit smaller screen
+        width: "45%",  // slightly bigger to look better
         rotate: "-15deg",
     }, 'cans')
 
@@ -254,7 +259,7 @@ mm.add("(max-width: 550px)", () => {
     });
 
     tl2.to("#cans", {
-        top: "238%",   
+        top: "238%",   // slightly less vertical
         left: "62%",
         width: "40%",
         rotate: "0deg",
